@@ -14,5 +14,5 @@ app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 app.listen(3001, () => {
-    console.log('API server now on port 3001!');
+    console.log('API server now on port ${PORT}!');
 });
