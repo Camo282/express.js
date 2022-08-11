@@ -1,8 +1,8 @@
-let $noteTitle = $('.note-title');
-let $noteText = $('.note-text');
-let $saveNoteBtn = $('.save-note');
-let $newNoteBtn = $('.new-note');
-let $noteList = $('.list-container .list-group');
+let noteTitle = ('.note-title');
+let noteText = ('.note-text');
+let saveNoteBtn = ('.save-note');
+let newNoteBtn = ('.new-note');
+let noteList = ('.list-container .list-group');
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -174,10 +174,10 @@ const renderNoteList = async (notes) => {
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
-  $saveNoteBtn.addEventListener('click', handleNoteSave);
-  $newNoteBtn.addEventListener('click', handleNewNoteView);
-  $noteTitle.addEventListener('keyup', handleRenderSaveBtn);
-  $noteText.addEventListener('keyup', handleRenderSaveBtn);
+  saveNoteBtn.addEventListener('click', handleNoteSave);
+  newNoteBtn.addEventListener('click', handleNewNoteView);
+  noteTitle.addEventListener('keyup', handleRenderSaveBtn);
+  noteText.addEventListener('keyup', handleRenderSaveBtn);
 }
 
 getAndRenderNotes();
